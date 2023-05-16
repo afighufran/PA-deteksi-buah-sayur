@@ -15,6 +15,11 @@
   keras
   tensorflow
   ```
+- sebelum run aplikasi, jalankan command berkut
+  ```
+  pip install -r requirements.txt
+  ```
+  atau pip install masing-masing library yang ada di list
 - `Fruits_Vegetable_Classification.py` adalah main file aplikasi yang di run 
 - `Fruit_Veg_Classification_Mobilenet.ipynb` adalah notebook training
 - untuk run aplikasi, jalankan command berikut
