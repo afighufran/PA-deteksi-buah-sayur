@@ -21,7 +21,7 @@
   ```
   atau pip install masing-masing library yang ada di list
 - `aplikasi-klasifikasi.py` adalah main file aplikasi yang di run 
-- `Fruit_Veg_Classification_Mobilenet.ipynb` adalah notebook training
+- `notebook-klasifikasi-buahsayur-mobilenet.ipynb` adalah notebook training
 - untuk run aplikasi, jalankan command berikut
   ```
   streamlit run Fruits_Vegetable_Classification.py
