@@ -29,7 +29,7 @@ def fetch_calories(prediction):
         calories = scrap.find("div", class_="BNeawe iBp4i AP7Wnd").text
         return calories
     except Exception as e:
-        st.error("Can't able to fetch the Calories")
+        st.error("Tidak dapat fetch hasil kalori")
         print(e)
 
 
