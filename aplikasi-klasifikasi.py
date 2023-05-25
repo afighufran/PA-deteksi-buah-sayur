@@ -7,12 +7,12 @@ import requests
 from bs4 import BeautifulSoup
 
 model = load_model('FV.h5')
-labels = {0: 'apple', 1: 'banana', 2: 'beetroot', 3: 'bell pepper', 4: 'cabbage', 5: 'capsicum', 6: 'carrot',
-          7: 'cauliflower', 8: 'chilli pepper', 9: 'corn', 10: 'cucumber', 11: 'eggplant', 12: 'garlic', 13: 'ginger',
-          14: 'grapes', 15: 'jalepeno', 16: 'kiwi', 17: 'lemon', 18: 'lettuce',
-          19: 'mango', 20: 'onion', 21: 'orange', 22: 'paprika', 23: 'pear', 24: 'peas', 25: 'pineapple',
-          26: 'pomegranate', 27: 'potato', 28: 'raddish', 29: 'soy beans', 30: 'spinach', 31: 'sweetcorn',
-          32: 'sweetpotato', 33: 'tomato', 34: 'turnip', 35: 'watermelon'}
+labels = {0: 'apel', 1: 'pisang', 2: 'bit merah', 3: 'bell pepper', 4: 'kubis', 5: 'kapsikum', 6: 'wortel',
+          7: 'kembang kol', 8: 'cabe', 9: 'jagung', 10: 'timun', 11: 'terong', 12: 'bawang putih', 13: 'jahe',
+          14: 'anggur', 15: 'jalapeno', 16: 'kiwi', 17: 'lemon', 18: 'selada',
+          19: 'mangga', 20: 'bawang bombay', 21: 'jeruk', 22: 'paprika', 23: 'pir', 24: 'kacang polong', 25: 'nanas',
+          26: 'delima', 27: 'kentang', 28: 'lobak', 29: 'kacang kedelai', 30: 'bayam', 31: 'jagung manis',
+          32: 'ubi jalar', 33: 'tomat', 34: 'lobak cina', 35: 'semangka'}
 
 fruits = ['Apple', 'Banana', 'Bello Pepper', 'Chilli Pepper', 'Grapes', 'Jalepeno', 'Kiwi', 'Lemon', 'Mango', 'Orange',
           'Paprika', 'Pear', 'Pineapple', 'Pomegranate', 'Watermelon']
@@ -21,7 +21,7 @@ vegetables = ['Beetroot', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower', 'Corn'
               'Tomato', 'Turnip']
 
 
-def fetch_calories(prediction):
+def fetch_kalori(prediction):
     try:
         url = 'https://www.google.com/search?&q=calories in ' + prediction
         req = requests.get(url).text
@@ -67,7 +67,7 @@ def run():
             else:
                 st.info('**Kategori : Buah**')
             st.success("**Hasil Prediksi : " + result + '**')
-            cal = fetch_calories(result)
+            cal = fetch_kalori(result)
             if cal:
                 st.warning('**' + cal + '(per 100 gram)**')
 
